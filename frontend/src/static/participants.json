@@ -10,8 +10,8 @@
     "name": "Amaan Ur Rahman",
     "industry": "IT",
     "skills": ["C++", "Python"],
-    "description": "2nd year in B.Tech in Mathematics",
-    "profilePicture": "Amaan Ur Rahman.jpeg"
+    "description": "2nd year in B.Tech in Mathematics and Computing",
+    "profilePicture": "Amaan's Profile Photo (1).jpg"
   },
   {
     "name": "Pranav Arora",
@@ -128,7 +128,7 @@
   },
   {
     "name": "Anirban Biswas",
-    "industry": "",
+    "industry": "Embedded",
     "skills": [],
     "description": "",
     "profilePicture": "Anirban Biswas.jpeg"
@@ -136,7 +136,7 @@
   {
     "name": "Anshul Mishra",
     "industry": "Embedded",
-    "skills": [],
+    "skills": ["Circuit design & simulation", "C", "C++", "Python", "IoT", "STMCubeMX", "STMCubeIDE"],
     "description": "1st year completed in B.Tech ECE",
     "profilePicture": "Anshul Mishra.jpeg"
   },
@@ -177,9 +177,9 @@
   },
   {
     "name": "Kartik Singla",
-    "industry": "",
-    "skills": [],
-    "description": "",
+    "industry": "Embedded",
+    "skills": ["C", "C++", "STMCubeIDE", "STMCubeMX", "Claude"],
+    "description": "2nd year completed in B.Tech ECE",
     "profilePicture": "Kartik SIngla.jpg"
   },
   {
@@ -219,8 +219,8 @@
   },
   {
     "name": "Vardaan Bajpai",
-    "industry": "",
-    "skills": [],
+    "industry": "IT",
+    "skills": ["Python","C++","DSA","Golang","Node js","express js","Next js"],
     "description": "",
     "profilePicture": "Vardaan bajpai.jpg"
   },
