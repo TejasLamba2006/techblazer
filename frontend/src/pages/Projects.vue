@@ -238,8 +238,8 @@ const getProfilePictureUrl = (filename) => {
             <!-- Bio -->
             <div class="mb-4">
               <h3 class="h6 uppercase-heading mb-2">Biography</h3>
-              <p class="text-white-80 small mb-0 line-height-relaxed" style="line-height: 1.6">
-                {{ activeItem.description || 'Professional engineer working on advanced industrial systems and digital architectures.' }}
+              <p class="mb-0 line-height-relaxed modal-description">
+                {{ activeItem.description }}
               </p>
             </div>
 
@@ -323,7 +323,7 @@ const getProfilePictureUrl = (filename) => {
             <!-- Description -->
             <div class="mb-4">
               <h3 class="h6 uppercase-heading mb-2">Project Overview</h3>
-              <p class="text-white-80 small mb-0 line-height-relaxed" style="line-height: 1.6">
+              <p class="mb-0 line-height-relaxed modal-description">
                 {{ activeItem.description }}
               </p>
             </div>
@@ -576,5 +576,11 @@ const getProfilePictureUrl = (filename) => {
 .fade-blur-leave-to {
   opacity: 0;
   backdrop-filter: blur(0px);
+}
+
+.modal-description {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 </style>
