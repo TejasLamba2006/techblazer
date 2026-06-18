@@ -7,4 +7,6 @@ coverage
 
 # Editor directories and files
 .vscode/*
-
+.agents/*
+.blackbox
+skills-lock.json

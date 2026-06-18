@@ -47,7 +47,9 @@ const handleLogin = () => {
 
     <!-- Password Gate Screen -->
     <template v-else>
-      <div class="login-container d-flex align-items-center justify-content-center flex-grow-1 position-relative overflow-hidden">
+      <div
+        class="login-container d-flex align-items-center justify-content-center flex-grow-1 position-relative overflow-hidden"
+      >
         <!-- Glowing background blobs -->
         <div class="login-glow glow-1"></div>
         <div class="login-glow glow-2"></div>
@@ -86,21 +88,45 @@ const handleLogin = () => {
                 aria-label="Toggle password visibility"
               >
                 <!-- Eye open -->
-                <svg v-if="showPassword" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                  <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
-                  <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                <svg
+                  v-if="showPassword"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-eye-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                  <path
+                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
+                  />
                 </svg>
                 <!-- Eye closed -->
-                <svg v-else xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
-                  <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474L2.234 4.317a.73.73 0 0 1 .187-.026h.111l.088.007a5.5 5.5 0 0 0 7.778 7.778q.008.08.007.163v.111a.7.7 0 0 1-.038.167M4.17 9.057a2.5 2.5 0 0 0 3.486 3.486z"/>
-                  <path d="M12.454 12.454A8.5 8.5 0 0 0 8 2.5a8.5 8.5 0 0 0-4.454 1.258L1.832 1.482A9 9 0 0 1 8 1a9 9 0 0 1 9 9 9 9 0 0 1-4.546 3.454z"/>
+                <svg
+                  v-else
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  class="bi bi-eye-slash-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474L2.234 4.317a.73.73 0 0 1 .187-.026h.111l.088.007a5.5 5.5 0 0 0 7.778 7.778q.008.08.007.163v.111a.7.7 0 0 1-.038.167M4.17 9.057a2.5 2.5 0 0 0 3.486 3.486z"
+                  />
+                  <path
+                    d="M12.454 12.454A8.5 8.5 0 0 0 8 2.5a8.5 8.5 0 0 0-4.454 1.258L1.832 1.482A9 9 0 0 1 8 1a9 9 0 0 1 9 9 9 9 0 0 1-4.546 3.454z"
+                  />
                 </svg>
               </button>
             </div>
 
             <!-- Error message -->
-            <div class="error-wrapper mb-3" style="min-height: 20px;">
-              <span v-if="showError" class="text-danger small fw-semibold">Incorrect password. Please try again.</span>
+            <div class="error-wrapper mb-3" style="min-height: 20px">
+              <span v-if="showError" class="text-danger small fw-semibold"
+                >Incorrect password. Please try again.</span
+              >
             </div>
 
             <!-- Submit Button -->
@@ -191,9 +217,18 @@ body {
   animation: shake 0.4s ease-in-out;
 }
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-8px); }
-  40%, 80% { transform: translateX(8px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-8px);
+  }
+  40%,
+  80% {
+    transform: translateX(8px);
+  }
 }
 
 .py-2-5 {
