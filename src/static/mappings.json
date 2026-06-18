@@ -1,0 +1,29 @@
+{
+  "participantsToProjects": {
+    "Aryan Maini": [
+      "AI Resume Matcher"
+    ],
+    "Krish Saxena": [
+      "AI Resume Matcher"
+    ],
+    "Amaan Ur Rahman": [
+      "Carpool"
+    ],
+    "Tejas Lamba": [
+      "Tic-Tac-Toe Model",
+      "Wheel Encoderless Robot Odometry"
+    ]
+  },
+  "projectsToParticipants": {
+    "AI Resume Matcher": [
+      "Aryan Maini",
+      "Krish Saxena"
+    ],
+    "Tic-Tac-Toe Model": [
+      "Tejas Lamba"
+    ],
+    "Wheel Encoderless Robot Odometry": [
+      "Tejas Lamba"
+    ]
+  }
+}

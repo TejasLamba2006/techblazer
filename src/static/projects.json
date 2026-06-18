@@ -1,0 +1,79 @@
+[
+  {
+    "title": "AI Resume Matcher",
+    "category": "IT",
+    "skills": [
+      "Python",
+      "Streamlit",
+      "Hugging Face",
+      "Deep Learning",
+      "NLP"
+    ],
+    "description": "Make hiring easy by Screening resumes with AI, Match candidates to job requirements"
+  },
+  {
+    "title": "Bionic Hand",
+    "category": "Embedded",
+    "skills": [
+      "Stm32CubeIde",
+      "Stm32CubeMx",
+      "C/C++",
+      "Stm32Cubeprogrammer",
+      "MemsStudio",
+      "TeraTerm/Docklight"
+    ],
+    "description": "The project develops a multi-finger bionic hand driven by DC motors and controlled by an STM32L476RGTx microcontroller, integrating flex-sensor-based position feedback, current-based load sensing, and real-time closed loop control."
+  },
+  {
+    "title": "Face Recongition System",
+    "category": "Embedded",
+    "skills": [
+      "CNN",
+      "Data Augmentation",
+      "TensorFlow"
+    ],
+    "people": "Priyansh and Shounak"
+  },
+  {
+    "title": "Carpool",
+    "category": "IT",
+    "skills": [
+      "Flutter",
+      "MongoDB",
+      "Node.js",
+      "React"
+    ],
+    "people": "Priyansh and Swayam"
+  },
+  {
+    "title": "Tic-Tac-Toe Model",
+    "category": "Embedded",
+    "skills": [
+      "STM32MP257",
+      "Python",
+      "YOLO",
+      "OpenCV",
+      "Computer Vision",
+      "OpenSTLinux",
+      "Embedded AI"
+    ],
+    "people": "Tejas Lamba",
+    "description": "AI-based Tic-Tac-Toe system using YOLO object detection on STM32MP257 for board recognition."
+  },
+  {
+    "title": "Wheel Encoderless Robot Odometry",
+    "category": "Embedded",
+    "skills": [
+      "Python",
+      "Computer Vision",
+      "Sensor Fusion",
+      "HID",
+      "UDP",
+      "Flask",
+      "Magnetometer",
+      "Robotics"
+    ],
+    "people": "Tejas Lamba",
+    "description": "Developed a low-cost odometry system using a mouse sensor and smartphone magnetometer to estimate robot position and orientation without wheel encoders."
+  }
+]

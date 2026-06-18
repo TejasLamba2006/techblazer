@@ -2,63 +2,112 @@
   {
     "name": "Aryan Maini",
     "industry": "IT",
-    "skills": ["Python", "ML"],
+    "skills": [
+      "Python",
+      "ML"
+    ],
     "description": "Specializing in Vector Databases",
     "profilePicture": "Aryan_Maini.png"
   },
   {
     "name": "Amaan Ur Rahman",
     "industry": "IT",
-    "skills": ["C++", "Python"],
+    "skills": [
+      "C++",
+      "Python"
+    ],
     "description": "2nd year in B.Tech in Mathematics and Computing",
     "profilePicture": "Amaan's Profile Photo (1).jpg"
   },
   {
     "name": "Pranav Arora",
     "industry": "Embedded",
-    "skills": ["ChatGPT", "Claude", "SQL", "Python", "C", "C++", "STMCubeMX", "STMCubeIDE"],
+    "skills": [
+      "ChatGPT",
+      "Claude",
+      "SQL",
+      "Python",
+      "C",
+      "C++",
+      "STMCubeMX",
+      "STMCubeIDE"
+    ],
     "description": "Amazing guy",
     "profilePicture": "Pranav Arora.jpeg"
   },
   {
     "name": "Aaditya Singh",
     "industry": "Embedded",
-    "skills": ["STMCubeIDE", "STMCubeMX", "C++", "Python"],
+    "skills": [
+      "STMCubeIDE",
+      "STMCubeMX",
+      "C++",
+      "Python"
+    ],
     "description": "3rd year completed in B.Tech",
     "profilePicture": "Aditya_Singh.png"
   },
   {
     "name": "Pramodh Srinivasan",
     "industry": "Embedded",
-    "skills": ["STMCubeMX", "STMCubeIDE", "C", "C++", "L"],
+    "skills": [
+      "STMCubeMX",
+      "STMCubeIDE",
+      "C",
+      "C++",
+      "L"
+    ],
     "description": "1st year completed in B.Tech",
     "profilePicture": "Pramodh Srinivasan.jpeg"
   },
   {
     "name": "Isha Pawar",
     "industry": "Embedded",
-    "skills": ["STMCubeIDE", "STMCubeMX", "C", "soft skills", "communication", "presentation"],
+    "skills": [
+      "STMCubeIDE",
+      "STMCubeMX",
+      "C",
+      "soft skills",
+      "communication",
+      "presentation"
+    ],
     "description": "4th year completed Electronics B.Tech",
     "profilePicture": "Isha Pawar.jpg"
   },
   {
     "name": "Yashasvi Vats",
     "industry": "Embedded",
-    "skills": ["ROS2", "Gazebo", "RViz"],
+    "skills": [
+      "ROS2",
+      "Gazebo",
+      "RViz"
+    ],
     "description": "1st year completed in B.Tech",
     "profilePicture": "Yashasvi Vats.jpeg"
   },
   {
     "name": "Lakshveer Singh",
     "industry": "Embedded",
-    "skills": ["STMCubeIDE", "STMCubeMX", "C", "C++", "IMU Calib"],
+    "skills": [
+      "STMCubeIDE",
+      "STMCubeMX",
+      "C",
+      "C++",
+      "IMU Calib"
+    ],
     "description": "1st year completed in B.Tech EE-VSLI",
     "profilePicture": "Lakshveer Singh.jpeg"
   },
   {
     "name": "Saiyid Mohammad Hussain Rizvi",
     "industry": "IT",
-    "skills": ["STMCubeIDE", "STMCubeMX", "C++", "Python", "Web Development"],
+    "skills": [
+      "STMCubeIDE",
+      "STMCubeMX",
+      "C++",
+      "Python",
+      "Web Development"
+    ],
     "description": "1st year completed in B.Tech CS",
     "profilePicture": "Saiyid Mohammad HussAain Rizvi.jpeg"
   },
@@ -83,7 +132,16 @@
   {
     "name": "Swayam Singhai",
     "industry": "IT",
-    "skills": ["Java", "OOP", "Python", "C", "STMCubeIDE", "STMCubeMX", "MongoDB", "Postman"],
+    "skills": [
+      "Java",
+      "OOP",
+      "Python",
+      "C",
+      "STMCubeIDE",
+      "STMCubeMX",
+      "MongoDB",
+      "Postman"
+    ],
     "description": "1st year completed in B.Tech CS",
     "profilePicture": "Swayam Singhai.jpeg"
   },
@@ -108,14 +166,25 @@
   {
     "name": "Krish Saxena",
     "industry": "IT",
-    "skills": ["Java", "C", "IT"],
+    "skills": [
+      "Java",
+      "C",
+      "IT"
+    ],
     "description": "2nd year completed in B.Tech CS",
     "profilePicture": "Krish Saxena.jpg"
   },
   {
     "name": "Jayendra Sharma",
     "industry": "IT",
-    "skills": ["Python", "C", "C++", "Scikit Learn", "OpenCV", "Deep Learning"],
+    "skills": [
+      "Python",
+      "C",
+      "C++",
+      "Scikit Learn",
+      "OpenCV",
+      "Deep Learning"
+    ],
     "description": "3rd year completed in B.Tech",
     "profilePicture": "Jayendra Sharma.png"
   },
@@ -136,7 +205,15 @@
   {
     "name": "Anshul Mishra",
     "industry": "Embedded",
-    "skills": ["Circuit design & simulation", "C", "C++", "Python", "IoT", "STMCubeMX", "STMCubeIDE"],
+    "skills": [
+      "Circuit design & simulation",
+      "C",
+      "C++",
+      "Python",
+      "IoT",
+      "STMCubeMX",
+      "STMCubeIDE"
+    ],
     "description": "1st year completed in B.Tech ECE",
     "profilePicture": "Anshul Mishra.jpeg"
   },
@@ -178,7 +255,13 @@
   {
     "name": "Kartik Singla",
     "industry": "Embedded",
-    "skills": ["C", "C++", "STMCubeIDE", "STMCubeMX", "Claude"],
+    "skills": [
+      "C",
+      "C++",
+      "STMCubeIDE",
+      "STMCubeMX",
+      "Claude"
+    ],
     "description": "2nd year completed in B.Tech ECE",
     "profilePicture": "Kartik SIngla.jpg"
   },
@@ -212,22 +295,69 @@
   },
   {
     "name": "Tejas Lamba",
-    "industry": "",
-    "skills": [],
-    "description": "",
+    "industry": "Embedded",
+    "skills": [
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "C",
+      "C++",
+      "SQL",
+      "STM32",
+      "STM32CubeIDE",
+      "STM32CubeMX",
+      "X-CUBE-AI",
+      "OpenSTLinux",
+      "OpenCV",
+      "YOLO",
+      "Computer Vision",
+      "Machine Learning",
+      "Deep Learning",
+      "TensorFlow",
+      "Keras",
+      "Scikit-learn",
+      "FAISS",
+      "RAG",
+      "Pathway AI",
+      "ROS2",
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "React",
+      "Next.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Prisma",
+      "Docker",
+      "Linux",
+      "Git",
+      "GitHub"
+    ],
+    "description": "B.Tech CSE (AI/ML). Embedded AI & Systems Engineering Intern working on STM32MP257, STM32U5, Computer Vision, TinyML, Robotics and Full-Stack AI applications.",
     "profilePicture": "Tejas_Lamba.png"
   },
   {
     "name": "Vardaan Bajpai",
     "industry": "IT",
-    "skills": ["Python","C++","DSA","Golang","Node js","express js","Next js"],
+    "skills": [
+      "Python",
+      "C++",
+      "DSA",
+      "Golang",
+      "Node js",
+      "express js",
+      "Next js"
+    ],
     "description": "",
     "profilePicture": "Vardaan bajpai.jpg"
   },
   {
     "name": "Darshil Pawar",
     "industry": "IT",
-    "skills": ["C", "ChatGPT"],
+    "skills": [
+      "C",
+      "ChatGPT"
+    ],
     "description": "1st year completed in Diploma in CS (AIDS)"
   }
 ]
