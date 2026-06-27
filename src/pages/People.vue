@@ -1,12 +1,27 @@
-<script setup>
+<script setup lang="ts">
 import { ref, computed } from 'vue'
 import participantsData from '../static/participants.json'
 import projectsData from '../static/projects.json'
 import mappingsData from '../static/mappings.json'
 
+interface Participant {
+  name: string
+  industry: string
+  skills: string[]
+  description: string
+  profilePicture?: string
+}
+
+interface Project {
+  title: string
+  category: string
+  skills: string[]
+  description: string
+}
+
 const selectedIndustry = ref('All')
 
-const participants = ref(participantsData)
+const participants = ref<Participant[]>(participantsData)
 
 const filteredParticipants = computed(() => {
   return participants.value.filter((p) => {
@@ -15,15 +30,23 @@ const filteredParticipants = computed(() => {
 })
 
 // Modal interaction state
-const activeModalType = ref(null) // 'person' or 'project'
-const activeItem = ref(null) // selected participant or project object
+const activeModalType = ref<'person' | 'project' | null>(null) // 'person' or 'project'
+const activeItem = ref<Participant | Project | null>(null) // selected participant or project object
 
-const showParticipantDetails = (participant) => {
+const activeParticipant = computed(() => {
+  return activeModalType.value === 'person' ? activeItem.value as Participant : null
+})
+
+const activeProject = computed(() => {
+  return activeModalType.value === 'project' ? activeItem.value as Project : null
+})
+
+const showParticipantDetails = (participant: Participant) => {
   activeModalType.value = 'person'
   activeItem.value = participant
 }
 
-const showProjectDetails = (project) => {
+const showProjectDetails = (project: Project) => {
   activeModalType.value = 'project'
   activeItem.value = project
 }
@@ -33,17 +56,17 @@ const closeDetails = () => {
   activeItem.value = null
 }
 
-const getProjectsForParticipant = (participantName) => {
-  const titles = mappingsData.participantsToProjects[participantName] || []
-  return projectsData.filter((p) => titles.includes(p.title))
+const getProjectsForParticipant = (participantName: string) => {
+  const titles = (mappingsData.participantsToProjects as Record<string, string[]>)[participantName] || []
+  return (projectsData as unknown as Project[]).filter((p) => titles.includes(p.title))
 }
 
-const getParticipantsForProject = (projectTitle) => {
-  const names = mappingsData.projectsToParticipants[projectTitle] || []
+const getParticipantsForProject = (projectTitle: string) => {
+  const names = (mappingsData.projectsToParticipants as Record<string, string[]>)[projectTitle] || []
   return participantsData.filter((p) => names.includes(p.name))
 }
 
-const getInitials = (name) => {
+const getInitials = (name: string) => {
   if (!name) return ''
   const parts = name.split(' ').filter(Boolean)
   return parts
@@ -53,7 +76,7 @@ const getInitials = (name) => {
     .toUpperCase()
 }
 
-const getProfilePictureUrl = (filename) => {
+const getProfilePictureUrl = (filename: string) => {
   if (!filename) return ''
   return new URL(`../static/profile_pictures/${filename}`, import.meta.url).href
 }
@@ -189,10 +212,10 @@ const getProfilePictureUrl = (filename) => {
       <div v-if="activeModalType" class="detail-modal-overlay" @click.self="closeDetails">
         <!-- Person Detail Modal -->
         <div
-          v-if="activeModalType === 'person'"
+          v-if="activeModalType === 'person' && activeParticipant"
           class="detail-modal-content card border border-white border-opacity-15 rounded-4 p-4 text-start"
         >
-          <div class="modal-glow-bg" :class="activeItem.industry === 'IT' ? 'it-glow' : 'embedded-glow'"></div>
+          <div class="modal-glow-bg" :class="activeParticipant.industry === 'IT' ? 'it-glow' : 'embedded-glow'"></div>
 
           <button
             class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-none z-3"
@@ -205,9 +228,9 @@ const getProfilePictureUrl = (filename) => {
             <div class="d-flex align-items-center gap-3 mb-4">
               <div class="position-relative flex-shrink-0" style="width: 80px; height: 80px;">
                 <img
-                  v-if="activeItem.profilePicture"
-                  :src="getProfilePictureUrl(activeItem.profilePicture)"
-                  :alt="activeItem.name"
+                  v-if="activeParticipant.profilePicture"
+                  :src="getProfilePictureUrl(activeParticipant.profilePicture)"
+                  :alt="activeParticipant.name"
                   class="rounded-circle object-fit-cover border border-white border-opacity-20 shadow"
                   style="width: 80px; height: 80px;"
                 />
@@ -215,30 +238,22 @@ const getProfilePictureUrl = (filename) => {
                   v-else
                   class="d-flex align-items-center justify-content-center rounded-circle border border-white border-opacity-20 text-white fw-bold shadow"
                   :style="
-                    activeItem.industry === 'IT'
+                    activeParticipant.industry === 'IT'
                       ? 'background-color: rgba(77, 163, 255, 0.1); color: #4da3ff !important; width: 80px; height: 80px; font-size: 1.5rem;'
                       : 'background-color: rgba(255, 210, 0, 0.1); color: #ffd200 !important; width: 80px; height: 80px; font-size: 1.5rem;'
                   "
                 >
-                  {{ getInitials(activeItem.name) }}
+                  {{ getInitials(activeParticipant.name) }}
                 </div>
-                <div
-                  class="position-absolute bottom-0 end-0 rounded-circle"
-                  :style="
-                    activeItem.industry === 'IT'
-                      ? 'background-color: #4da3ff; width: 14px; height: 14px; border: 2px solid #0b1329;'
-                      : 'background-color: #ffd200; width: 14px; height: 14px; border: 2px solid #0b1329;'
-                  "
-                ></div>
               </div>
               <div>
-                <h2 class="h4 fw-bold text-white mb-1 tracking-tight">{{ activeItem.name }}</h2>
+                <h2 class="h4 fw-bold text-white mb-1 tracking-tight">{{ activeParticipant.name }}</h2>
                 <span
                   class="badge rounded-pill text-uppercase tracking-wider small fw-bold"
-                  :class="activeItem.industry === 'IT' ? 'bg-primary bg-opacity-25 text-cyan border border-info border-opacity-10' : 'bg-warning bg-opacity-25 text-gold border border-warning border-opacity-10'"
+                  :class="activeParticipant.industry === 'IT' ? 'bg-primary bg-opacity-25 text-cyan border border-info border-opacity-10' : 'bg-warning bg-opacity-25 text-gold border border-warning border-opacity-10'"
                   style="font-size: 0.7rem;"
                 >
-                  {{ activeItem.industry }} Developer
+                  {{ activeParticipant.industry }} Developer
                 </span>
               </div>
             </div>
@@ -247,7 +262,7 @@ const getProfilePictureUrl = (filename) => {
             <div class="mb-4">
               <h3 class="h6 uppercase-heading mb-2">Biography</h3>
               <p class="mb-0 line-height-relaxed modal-description">
-                {{ activeItem.description }}
+                {{ activeParticipant.description }}
               </p>
             </div>
 
@@ -255,7 +270,7 @@ const getProfilePictureUrl = (filename) => {
             <div class="mb-4">
               <h3 class="h6 uppercase-heading mb-2">Skills &amp; Expertise</h3>
               <div class="d-flex flex-wrap gap-2">
-                <span v-for="skill in activeItem.skills" :key="skill" class="badge-skill">
+                <span v-for="skill in activeParticipant.skills" :key="skill" class="badge-skill">
                   {{ skill }}
                 </span>
               </div>
@@ -266,7 +281,7 @@ const getProfilePictureUrl = (filename) => {
               <h3 class="h6 uppercase-heading mb-3">Assigned Projects</h3>
               <div class="d-flex flex-column gap-2">
                 <div
-                  v-for="proj in getProjectsForParticipant(activeItem.name)"
+                  v-for="proj in getProjectsForParticipant(activeParticipant.name)"
                   :key="proj.title"
                   class="sub-card p-3 rounded-3 d-flex justify-content-between align-items-center transition-all cursor-pointer"
                   @click="showProjectDetails(proj)"
@@ -294,10 +309,10 @@ const getProfilePictureUrl = (filename) => {
 
         <!-- Project Detail Modal -->
         <div
-          v-if="activeModalType === 'project'"
+          v-if="activeModalType === 'project' && activeProject"
           class="detail-modal-content card border border-white border-opacity-15 rounded-4 p-4 text-start"
         >
-          <div class="modal-glow-bg" :class="activeItem.category.includes('IT') ? 'it-glow' : 'embedded-glow'"></div>
+          <div class="modal-glow-bg" :class="activeProject.category.includes('IT') ? 'it-glow' : 'embedded-glow'"></div>
 
           <button
             class="btn-close btn-close-white position-absolute top-0 end-0 m-3 shadow-none z-3"
@@ -307,32 +322,22 @@ const getProfilePictureUrl = (filename) => {
 
           <div class="position-relative z-2">
             <!-- Header -->
-            <div class="d-flex justify-content-between align-items-start mb-4">
-              <div class="pe-4">
-                <span
-                  class="badge rounded-pill text-uppercase tracking-wider small fw-bold mb-2 d-inline-block"
-                  :class="activeItem.category.includes('IT') ? 'bg-primary bg-opacity-25 text-cyan border border-info border-opacity-10' : 'bg-warning bg-opacity-25 text-gold border border-warning border-opacity-10'"
-                  style="font-size: 0.7rem;"
-                >
-                  {{ activeItem.category }} Project
-                </span>
-                <h2 class="h4 fw-bold text-white mb-0 tracking-tight">{{ activeItem.title }}</h2>
-              </div>
-              <div
-                class="project-dot mt-2 flex-shrink-0 animate-pulse"
-                :style="
-                  activeItem.category.includes('IT')
-                    ? 'background-color: #4da3ff;'
-                    : 'background-color: #ffd200;'
-                "
-              ></div>
+            <div class="mb-4">
+              <span
+                class="badge rounded-pill text-uppercase tracking-wider small fw-bold mb-2 d-inline-block"
+                :class="activeProject.category.includes('IT') ? 'bg-primary bg-opacity-25 text-cyan border border-info border-opacity-10' : 'bg-warning bg-opacity-25 text-gold border border-warning border-opacity-10'"
+                style="font-size: 0.7rem;"
+              >
+                {{ activeProject.category }} Project
+              </span>
+              <h2 class="h4 fw-bold text-white mb-0 tracking-tight">{{ activeProject.title }}</h2>
             </div>
 
             <!-- Description -->
             <div class="mb-4">
               <h3 class="h6 uppercase-heading mb-2">Project Overview</h3>
               <p class="mb-0 line-height-relaxed modal-description">
-                {{ activeItem.description }}
+                {{ activeProject.description }}
               </p>
             </div>
 
@@ -340,7 +345,7 @@ const getProfilePictureUrl = (filename) => {
             <div class="mb-4">
               <h3 class="h6 uppercase-heading mb-2">Technologies Used</h3>
               <div class="d-flex flex-wrap gap-2">
-                <span v-for="skill in activeItem.skills" :key="skill" class="badge-skill">
+                <span v-for="skill in activeProject.skills" :key="skill" class="badge-skill">
                   {{ skill }}
                 </span>
               </div>
@@ -351,7 +356,7 @@ const getProfilePictureUrl = (filename) => {
               <h3 class="h6 uppercase-heading mb-3">Project Team</h3>
               <div class="d-flex flex-column gap-2">
                 <div
-                  v-for="p in getParticipantsForProject(activeItem.title)"
+                  v-for="p in getParticipantsForProject(activeProject.title)"
                   :key="p.name"
                   class="sub-card p-3 rounded-3 d-flex justify-content-between align-items-center transition-all cursor-pointer"
                   @click="showParticipantDetails(p)"
@@ -477,6 +482,7 @@ const getProfilePictureUrl = (filename) => {
   width: 100%;
   max-height: 85vh;
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
   border-radius: 24px !important;
   animation: modal-appear 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);

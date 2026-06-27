@@ -8,8 +8,8 @@ const totalProjects = ref(projectsData.length)
 const totalParticipants = ref(participantsData.length)
 
 // Extract unique skills from projects and participants
-const uniqueSkills = computed(() => {
-  const skillsSet = new Set()
+const uniqueSkills = computed<string[]>(() => {
+  const skillsSet = new Set<string>()
   
   projectsData.forEach(p => {
     if (p.skills && Array.isArray(p.skills)) {
@@ -33,18 +33,18 @@ const featuredProjects = ref(projectsData.slice(0, 3))
 const featuredParticipants = ref(participantsData.slice(0, 3))
 
 // Helper to get name initials for avatar
-const getInitials = (name) => {
+const getInitials = (name: string) => {
   if (!name) return ''
   const parts = name.split(' ').filter(Boolean)
   return parts
-    .map((n) => n[0])
+    .map((n: string) => n[0])
     .join('')
     .slice(0, 2)
     .toUpperCase()
 }
 
 // Helper to get profile picture URL
-const getProfilePictureUrl = (filename) => {
+const getProfilePictureUrl = (filename: string) => {
   if (!filename) return ''
   return new URL(`../static/profile_pictures/${filename}`, import.meta.url).href
 }
@@ -93,7 +93,7 @@ const getProfilePictureUrl = (filename) => {
     <!-- Stats Grid -->
     <div class="row g-4 mb-5">
       <!-- Stat card 1: Projects -->
-      <div class="col-6 col-md-3">
+      <div class="col-12 col-md-4">
         <div class="stat-card p-4 rounded-4 border border-white border-opacity-10 text-center transition-all h-100">
           <div class="stat-icon-wrapper mx-auto mb-3 bg-opacity-10 bg-info rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#4da3ff" class="bi bi-folder" viewBox="0 0 16 16">
@@ -106,7 +106,7 @@ const getProfilePictureUrl = (filename) => {
       </div>
       
       <!-- Stat card 2: Team Members -->
-      <div class="col-6 col-md-3">
+      <div class="col-12 col-md-4">
         <div class="stat-card p-4 rounded-4 border border-white border-opacity-10 text-center transition-all h-100">
           <div class="stat-icon-wrapper mx-auto mb-3 bg-opacity-10 bg-warning rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ffd200" class="bi bi-people" viewBox="0 0 16 16">
@@ -119,28 +119,15 @@ const getProfilePictureUrl = (filename) => {
       </div>
 
       <!-- Stat card 3: Technologies -->
-      <div class="col-6 col-md-3">
+      <div class="col-12 col-md-4">
         <div class="stat-card p-4 rounded-4 border border-white border-opacity-10 text-center transition-all h-100">
           <div class="stat-icon-wrapper mx-auto mb-3 bg-opacity-10 bg-success rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#20c997" class="bi bi-cpu" viewBox="0 0 16 16">
-              <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1a.5.5 0 0 1 .5.5v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1a.5.5 0 0 1-.5.5h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1a.5.5 0 0 1-.5-.5v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2V3h1.5a.5.5 0 0 1 0-1H14z"/>
+              <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1a.5.5 0 0 1 .5.5v1h1.5a.5.5 0 0 1 0 1H14z"/>
             </svg>
           </div>
           <div class="display-6 fw-bold text-white mb-1">{{ totalSkills }}</div>
           <div class="text-white-50 small text-uppercase tracking-wider" style="font-size: 0.75rem;">Tech Skills</div>
-        </div>
-      </div>
-
-      <!-- Stat card 4: Industries -->
-      <div class="col-6 col-md-3">
-        <div class="stat-card p-4 rounded-4 border border-white border-opacity-10 text-center transition-all h-100">
-          <div class="stat-icon-wrapper mx-auto mb-3 bg-opacity-10 bg-danger rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#f03e3e" class="bi bi-briefcase" viewBox="0 0 16 16">
-              <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/>
-            </svg>
-          </div>
-          <div class="display-6 fw-bold text-white mb-1">2</div>
-          <div class="text-white-50 small text-uppercase tracking-wider" style="font-size: 0.75rem;">Core Industries</div>
         </div>
       </div>
     </div>
@@ -150,7 +137,7 @@ const getProfilePictureUrl = (filename) => {
       <div class="text-center mb-5">
         <h2 class="h3 fw-bold text-white mb-2">Our Engineering Domains</h2>
         <p class="text-white-50 small mx-auto" style="max-width: 480px;">
-          Empowering builders across two distinct domains of modern industrial engineering.
+          Empowering builders across modern software and technology engineering domains.
         </p>
       </div>
       
@@ -247,11 +234,10 @@ const getProfilePictureUrl = (filename) => {
           <div class="card h-100 border border-white border-opacity-10 bg-white bg-opacity-5 rounded-4 p-4 hover-profile-card transition-all d-flex flex-column justify-content-between" style="background-color: rgba(255, 255, 255, 0.03) !important;">
             <div>
               <!-- Category and indicator -->
-              <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="mb-3">
                 <span class="text-uppercase tracking-wider small fw-semibold" :class="project.category.includes('IT') ? 'text-cyan' : 'text-gold'" style="font-size: 0.75rem;">
                   {{ project.category }}
                 </span>
-                <div class="project-dot" :style="project.category.includes('IT') ? 'background-color: #4da3ff;' : 'background-color: #ffd200;'"></div>
               </div>
               <!-- Title -->
               <h4 class="h5 fw-bold text-white mb-2">{{ project.title }}</h4>
