@@ -10,45 +10,49 @@ describe('People.vue Modal Navigation', () => {
     // Initially modal should not be open
     expect(wrapper.find('.detail-modal-overlay').exists()).toBe(false)
 
-    // Find all "More Detail" buttons
-    const buttons = wrapper.findAll('button')
-    const moreDetailButtons = buttons.filter((btn) => btn.text() === 'More Detail')
-    expect(moreDetailButtons.length).toBeGreaterThan(0)
+    // Find all participant cards
+    const participantCards = wrapper.findAll('.hover-profile-card')
+    expect(participantCards.length).toBeGreaterThan(0)
 
-    // Click "More Detail" on the first participant (Aryan Maini)
-    await moreDetailButtons[0]!.trigger('click')
+    // Find the participant card for Tejas Lamba
+    const tejasCard = participantCards.find((card) => card.text().includes('Tejas Lamba'))
+    expect(tejasCard).toBeDefined()
+
+    // Click on the participant card
+    await tejasCard!.trigger('click')
 
     // Modal should now be open
     expect(wrapper.find('.detail-modal-overlay').exists()).toBe(true)
-    expect(wrapper.find('.detail-modal-content h2').text()).toBe('Aryan Maini')
+    expect(wrapper.find('.detail-modal-content h2').text()).toBe('Tejas Lamba')
 
     // Check if the assigned projects are listed
     const projectCards = wrapper.findAll('.detail-modal-content .sub-card')
-    expect(projectCards.length).toBe(2)
-    expect(projectCards[0]!.text()).toContain('Distributed Avionics Telemetry System')
-    expect(projectCards[1]!.text()).toContain('WebGL Real-time Telemetry Dashboard')
+    expect(projectCards.length).toBe(3)
+    const cardTexts = projectCards.map(c => c.text())
+    expect(cardTexts.some(text => text.includes('Tic-Tac-Toe Model'))).toBe(true)
+    expect(cardTexts.some(text => text.includes('Wheel Encoderless Robot Odometry'))).toBe(true)
+    expect(cardTexts.some(text => text.includes('Linux/Open CV'))).toBe(true)
 
-    // Click "View Project" on Distributed Avionics Telemetry System
-    const viewProjectBtn = projectCards[0]!.find('button')
+    // Click "View Project" on Tic-Tac-Toe Model
+    const tictactoeCard = projectCards.find(card => card.text().includes('Tic-Tac-Toe Model'))
+    expect(tictactoeCard).toBeDefined()
+    const viewProjectBtn = tictactoeCard!.find('button')
     await viewProjectBtn.trigger('click')
 
     // Modal should switch to Project Detail mode
-    expect(wrapper.find('.detail-modal-content h2').text()).toBe(
-      'Distributed Avionics Telemetry System',
-    )
+    expect(wrapper.find('.detail-modal-content h2').text()).toBe('Tic-Tac-Toe Model')
 
     // Project team members should be listed
     const teamCards = wrapper.findAll('.detail-modal-content .sub-card')
-    expect(teamCards.length).toBe(2)
-    expect(teamCards[0]!.text()).toContain('Aryan Maini')
-    expect(teamCards[1]!.text()).toContain('Pramodh Srinivasan')
+    expect(teamCards.length).toBe(1)
+    expect(teamCards[0]!.text()).toContain('Tejas Lamba')
 
-    // Click "View Profile" on Pramodh Srinivasan
-    const viewProfileBtn = teamCards[1]!.find('button')
+    // Click "View Profile" on Tejas Lamba
+    const viewProfileBtn = teamCards[0]!.find('button')
     await viewProfileBtn.trigger('click')
 
-    // Modal should switch back to showing Pramodh Srinivasan
-    expect(wrapper.find('.detail-modal-content h2').text()).toBe('Pramodh Srinivasan')
+    // Modal should switch back to showing Tejas Lamba
+    expect(wrapper.find('.detail-modal-content h2').text()).toBe('Tejas Lamba')
 
     // Close the details modal
     const closeBtn = wrapper.find('.btn-close')
@@ -66,30 +70,32 @@ describe('Projects.vue Modal Navigation', () => {
     // Initially modal should not be open
     expect(wrapper.find('.detail-modal-overlay').exists()).toBe(false)
 
-    // Find all "More Detail" buttons
-    const buttons = wrapper.findAll('button')
-    const moreDetailButtons = buttons.filter((btn) => btn.text() === 'More Detail')
-    expect(moreDetailButtons.length).toBeGreaterThan(0)
+    // Find all project cards
+    const projectCards = wrapper.findAll('.hover-profile-card')
+    expect(projectCards.length).toBeGreaterThan(0)
 
-    // Click "More Detail" on the first project (STM32 Edge AI Smart Camera)
-    await moreDetailButtons[0]!.trigger('click')
+    // Find the project card for Tic-Tac-Toe Model
+    const ticTacToeCard = projectCards.find((card) => card.text().includes('Tic-Tac-Toe Model'))
+    expect(ticTacToeCard).toBeDefined()
+
+    // Click on the project card
+    await ticTacToeCard!.trigger('click')
 
     // Modal should now be open in Project Detail mode
     expect(wrapper.find('.detail-modal-overlay').exists()).toBe(true)
-    expect(wrapper.find('.detail-modal-content h2').text()).toBe('STM32 Edge AI Smart Camera')
+    expect(wrapper.find('.detail-modal-content h2').text()).toBe('Tic-Tac-Toe Model')
 
     // Check if team members are listed
     const teamCards = wrapper.findAll('.detail-modal-content .sub-card')
-    expect(teamCards.length).toBe(2)
-    expect(teamCards[0]!.text()).toContain('Pranav Arora')
-    expect(teamCards[1]!.text()).toContain('Aaditya Singh')
+    expect(teamCards.length).toBe(1)
+    expect(teamCards[0]!.text()).toContain('Tejas Lamba')
 
-    // Click "View Profile" on Pranav Arora
+    // Click "View Profile" on Tejas Lamba
     const viewProfileBtn = teamCards[0]!.find('button')
     await viewProfileBtn.trigger('click')
 
     // Modal should switch to Person Detail mode
-    expect(wrapper.find('.detail-modal-content h2').text()).toBe('Pranav Arora')
+    expect(wrapper.find('.detail-modal-content h2').text()).toBe('Tejas Lamba')
 
     // Close the details modal
     const closeBtn = wrapper.find('.btn-close')

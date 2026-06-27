@@ -190,16 +190,23 @@
   },
   {
     "name": "Amishi Mathur",
-    "industry": "",
-    "skills": [],
-    "description": "",
+    "industry": "Embedded",
+    "skills": [
+      "Virtual Reality",
+      "Gesture Recognition",
+      "Sentis AI"
+    ],
+    "description": "Intern exploring VR gesture recognition and Sentis AI.",
     "profilePicture": "Amishi Mathur.jpeg"
   },
   {
     "name": "Anirban Biswas",
     "industry": "Embedded",
-    "skills": [],
-    "description": "",
+    "skills": [
+      "TouchGFX",
+      "Security"
+    ],
+    "description": "Intern working on security integration with TouchGFX.",
     "profilePicture": "Anirban Biswas.jpeg"
   },
   {
@@ -219,37 +226,53 @@
   },
   {
     "name": "Avik Chaukiyal",
-    "industry": "",
-    "skills": [],
-    "description": "",
+    "industry": "Embedded",
+    "skills": [
+      "TouchGFX",
+      "ToF Sensors"
+    ],
+    "description": "Intern working on Time-of-Flight gesture GUI controls.",
     "profilePicture": "Avik Chaukiyal.jpg"
   },
   {
     "name": "Daksh Bhardwaj",
-    "industry": "",
-    "skills": [],
-    "description": "",
+    "industry": "Embedded",
+    "skills": [
+      "STM32H725",
+      "TouchGFX"
+    ],
+    "description": "Intern working on Teach Pendant interface with TouchGFX.",
     "profilePicture": "Daksh Bhardwaj.jpeg"
   },
   {
     "name": "Dushyant Singh",
-    "industry": "",
-    "skills": [],
-    "description": "",
+    "industry": "IT",
+    "skills": [
+      "Python",
+      "LLM",
+      "KiCAD"
+    ],
+    "description": "Intern working on Generative AI schematic generators.",
     "profilePicture": "Dushyant Singh.jpeg"
   },
   {
     "name": "Gurjas Singh",
-    "industry": "",
-    "skills": [],
-    "description": "",
+    "industry": "Embedded",
+    "skills": [
+      "STM32N6",
+      "Face Detection"
+    ],
+    "description": "Intern working on face detection models for STM32N6.",
     "profilePicture": "Gurjas Singh.jpeg"
   },
   {
     "name": "Jyoti Pundir",
-    "industry": "",
-    "skills": [],
-    "description": "",
+    "industry": "IT",
+    "skills": [
+      "React",
+      "Flutter"
+    ],
+    "description": "Intern working on the ST Carpooling APP.",
     "profilePicture": "Jyoti Pundir.jpeg"
   },
   {
@@ -267,30 +290,42 @@
   },
   {
     "name": "Mehak Talwar",
-    "industry": "",
-    "skills": [],
-    "description": "",
+    "industry": "Embedded",
+    "skills": [
+      "STM32",
+      "Motor Control"
+    ],
+    "description": "Intern working on motor control algorithms and Bionic Hand.",
     "profilePicture": "Mehak Talwar.jpeg"
   },
   {
     "name": "Prachi Mehta",
-    "industry": "",
-    "skills": [],
-    "description": "",
+    "industry": "IT",
+    "skills": [
+      "React",
+      "Flutter"
+    ],
+    "description": "Intern working on the ST Carpooling APP.",
     "profilePicture": "Prachi_Mehta.jpg"
   },
   {
     "name": "Riya",
-    "industry": "",
-    "skills": [],
-    "description": "",
+    "industry": "Embedded",
+    "skills": [
+      "TouchGFX",
+      "Security"
+    ],
+    "description": "Intern working on security integration with TouchGFX.",
     "profilePicture": "RIYA PHOTO.jpg"
   },
   {
     "name": "Shounak Dasgupta",
-    "industry": "",
-    "skills": [],
-    "description": "",
+    "industry": "Embedded",
+    "skills": [
+      "STM32N6",
+      "Face Detection"
+    ],
+    "description": "Intern working on face detection models for STM32N6.",
     "profilePicture": "Shounak Dasgupta.jpg"
   },
   {
@@ -348,7 +383,7 @@
       "express js",
       "Next js"
     ],
-    "description": "",
+    "description": "Intern working on ST Carpooling APP and Motor Control.",
     "profilePicture": "Vardaan bajpai.jpg"
   },
   {
@@ -358,6 +393,7 @@
       "C",
       "ChatGPT"
     ],
-    "description": "1st year completed in Diploma in CS (AIDS)"
+    "description": "1st year completed in Diploma in CS (AIDS)",
+    "profilePicture": "Darshil_Pawar.jpg"
   }
 ]
