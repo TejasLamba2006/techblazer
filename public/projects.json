@@ -1,0 +1,194 @@
+[
+  {
+    "id": "ai-resume-matcher",
+    "title": "AI Resume Matcher",
+    "category": "IT",
+    "skills": ["Python", "Streamlit", "Hugging Face", "Deep Learning", "NLP"],
+    "description": "Make hiring easy by Screening resumes with AI, Match candidates to job requirements.",
+    "tags": ["AI", "NLP", "Hiring"]
+  },
+  {
+    "id": "bionic-hand",
+    "title": "Bionic Hand",
+    "category": "Embedded",
+    "skills": ["STM32CubeIDE", "STM32CubeMX", "C/C++", "STM32CubeProgrammer", "MEMS Studio", "TeraTerm/Docklight"],
+    "description": "The project develops a multi-finger bionic hand driven by DC motors and controlled by an STM32L476RGTx microcontroller, integrating flex-sensor-based position feedback, current-based load sensing, and real-time closed loop control.",
+    "tags": ["Robotics", "STM32", "Motor Control"]
+  },
+  {
+    "id": "face-recognition-system",
+    "title": "Face Recognition System",
+    "category": "Embedded",
+    "skills": ["CNN", "Data Augmentation", "TensorFlow"],
+    "description": "Face Recognition System using deep learning, CNN, and TensorFlow.",
+    "tags": ["Computer Vision", "Deep Learning"]
+  },
+  {
+    "id": "carpooling-1",
+    "title": "Carpooling #1",
+    "category": "IT",
+    "skills": ["Flutter", "MongoDB", "Node.js", "React"],
+    "description": "ST Carpooling APP - Group 1. A mobile application designed for ST employees to share rides, optimize commutes, and reduce carbon footprint.",
+    "tags": ["Mobile", "React Native", "Carpooling"]
+  },
+  {
+    "id": "carpooling-2",
+    "title": "Carpooling #2",
+    "category": "IT",
+    "skills": ["Flutter", "MongoDB", "Node.js", "React"],
+    "description": "ST Carpooling APP - Group 2. A mobile application designed for ST employees to share rides, optimize commutes, and reduce carbon footprint.",
+    "tags": ["Mobile", "React Native", "Carpooling"]
+  },
+  {
+    "id": "carpooling-3",
+    "title": "Carpooling #3",
+    "category": "IT",
+    "skills": ["Flutter", "MongoDB", "Node.js", "React"],
+    "description": "ST Carpooling APP - Group 3. A mobile application designed for ST employees to share rides, optimize commutes, and reduce carbon footprint.",
+    "tags": ["Mobile", "React Native", "Carpooling"]
+  },
+  {
+    "id": "carpooling-4",
+    "title": "Carpooling #4",
+    "category": "IT",
+    "skills": ["Flutter", "MongoDB", "Node.js", "React"],
+    "description": "ST Carpooling APP - Group 4. A mobile application designed for ST employees to share rides, optimize commutes, and reduce carbon footprint.",
+    "tags": ["Mobile", "React Native", "Carpooling"]
+  },
+  {
+    "id": "tic-tac-toe-model",
+    "title": "Tic-Tac-Toe Model",
+    "category": "Embedded",
+    "skills": ["STM32MP257", "Python", "YOLO", "OpenCV", "Computer Vision", "OpenSTLinux", "Embedded AI"],
+    "description": "AI-based Tic-Tac-Toe system using YOLO object detection on STM32MP257 for board recognition.",
+    "tags": ["Computer Vision", "Embedded AI", "YOLO"]
+  },
+  {
+    "id": "wheel-encoderless-robot-odometry",
+    "title": "Wheel Encoderless Robot Odometry",
+    "category": "Embedded",
+    "skills": ["Python", "Computer Vision", "Sensor Fusion", "HID", "UDP", "Flask", "Magnetometer", "Robotics"],
+    "description": "Developed a low-cost odometry system using a mouse sensor and smartphone magnetometer to estimate robot position and orientation without wheel encoders.",
+    "tags": ["Robotics", "Sensor Fusion", "Computer Vision"]
+  },
+  {
+    "id": "teach-pendant-stm32h725",
+    "title": "Teach Pendant on STM32H725",
+    "category": "Embedded",
+    "skills": ["STM32H725", "C/C++", "TouchGFX", "RTOS"],
+    "description": "Developing a teach pendant control interface using the high-performance STM32H725 microcontroller.",
+    "tags": ["TouchGFX", "RTOS", "HMI"]
+  },
+  {
+    "id": "customer-project-nrf9160",
+    "title": "Customer Project (nRF9160 DK)",
+    "category": "Embedded",
+    "skills": ["nRF9160", "Zephyr RTOS", "C", "LTE-M/NB-IoT", "GPS"],
+    "description": "Cellular IoT customer project developed on the nRF9160 DK board for asset tracking and sensor data logging.",
+    "tags": ["IoT", "Zephyr", "Cellular"]
+  },
+  {
+    "id": "mivry-gesture-recognition",
+    "title": "MiVRy Gesture Recognition",
+    "category": "Embedded",
+    "skills": ["Virtual Reality", "Gesture Recognition", "Sentis AI", "Unity", "C#"],
+    "description": "Exploration of the Sentis AI Inferencing Library for gesture recognition and ST Robotics VR app.",
+    "tags": ["VR", "Unity", "AI"]
+  },
+  {
+    "id": "linux-opencv",
+    "title": "Linux/OpenCV",
+    "category": "Embedded",
+    "skills": ["Linux", "OpenCV", "C++", "Python", "Computer Vision"],
+    "description": "Computer vision and image processing application deployed on Linux platforms.",
+    "tags": ["Computer Vision", "Linux", "Image Processing"]
+  },
+  {
+    "id": "face-detection-stm32n6",
+    "title": "Face Detection on STM32N6",
+    "category": "Embedded",
+    "skills": ["STM32N6", "Face Detection", "Neural Network", "Embedded AI"],
+    "description": "Deploying face detection models on the next-generation STM32N6 MCU for TechBlazer's Faces.",
+    "tags": ["Embedded AI", "Neural Network", "Computer Vision"]
+  },
+  {
+    "id": "imu-calibration",
+    "title": "IMU Calibration for Acceleration",
+    "category": "Embedded",
+    "skills": ["IMU", "Calibration", "Sensor Fusion", "C"],
+    "description": "Precision calibration algorithms for Inertial Measurement Units (IMU) to measure accurate acceleration.",
+    "tags": ["Sensors", "Calibration", "IMU"]
+  },
+  {
+    "id": "tof-gestures-gui",
+    "title": "ToF Gestures based GUI control",
+    "category": "Embedded",
+    "skills": ["Time-of-Flight", "TouchGFX", "STM32", "GUI"],
+    "description": "Gesture-controlled graphical user interface using Time-of-Flight sensors and TouchGFX.",
+    "tags": ["TouchGFX", "ToF", "HMI"]
+  },
+  {
+    "id": "llm-kicad-schematic",
+    "title": "LLM for KiCAD Schematic Gen",
+    "category": "IT",
+    "skills": ["LLM", "Python", "KiCAD", "Generative AI", "Schematic Generation"],
+    "description": "Applying Large Language Models to automate schematic generation and design validation in KiCAD.",
+    "tags": ["LLM", "Generative AI", "EDA"]
+  },
+  {
+    "id": "website-conference-link",
+    "title": "Website for Conference Link Updating",
+    "category": "IT",
+    "skills": ["Web Development", "HTML", "CSS", "JavaScript", "Backend"],
+    "description": "A web portal designed to dynamically manage and update conference schedules and link directories.",
+    "tags": ["Web Dev", "Frontend", "Backend"]
+  },
+  {
+    "id": "security-touchgfx",
+    "title": "Security + TouchGFX",
+    "category": "Embedded",
+    "skills": ["TouchGFX", "Cryptography", "STM32", "Secure Boot"],
+    "description": "Integrating security protocols and secure UI workflows using TouchGFX on STM32 hardware.",
+    "tags": ["Security", "TouchGFX", "Cryptography"]
+  },
+  {
+    "id": "tof-piezo-buzzer",
+    "title": "ToF+Piezo Buzzer",
+    "category": "Embedded",
+    "skills": ["Time-of-Flight", "Piezo Buzzer", "STM32", "GPIO"],
+    "description": "Proximity alarm and feedback system using Time-of-Flight sensors and a piezo buzzer.",
+    "tags": ["Sensors", "GPIO", "Proximity"]
+  },
+  {
+    "id": "anpr",
+    "title": "ANPR",
+    "category": "Embedded",
+    "skills": ["OpenCV", "Python", "YOLO", "OCR", "ANPR"],
+    "description": "Automatic Number Plate Recognition system designed to detect and read license plates from video streams.",
+    "tags": ["Computer Vision", "YOLO", "OCR"]
+  },
+  {
+    "id": "motor-control-stm32cubemx",
+    "title": "Motor Control with STM32CubeMX",
+    "category": "Embedded",
+    "skills": ["STM32CubeMX", "Motor Control", "PWM", "C"],
+    "description": "Configuring and programming advanced motor control algorithms using STM32CubeMX and timers.",
+    "tags": ["Motor Control", "PWM", "STM32"]
+  },
+  {
+    "id": "bom-tool",
+    "title": "BOM Tool Development Deployment",
+    "category": "IT",
+    "skills": ["Python", "React", "Database", "BOM Management"],
+    "description": "Bill of Materials (BOM) management tool to streamline component sourcing, pricing, and lifecycle tracking.",
+    "tags": ["Web Dev", "React", "Database"]
+  },
+  {
+    "id": "techblazer-website",
+    "title": "TechBlazer Website",
+    "category": "IT",
+    "skills": ["Web Development", "Fullstack", "React", "Node.js"],
+    "description": "Website development for TechBlazers program.",
+    "tags": ["Web Dev", "React", "Fullstack"]
+  }
+]

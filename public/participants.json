@@ -1,0 +1,246 @@
+[
+  {
+    "id": "aryan-maini",
+    "name": "Aryan Maini",
+    "industry": ["IT"],
+    "skills": ["Python", "ML"],
+    "description": "Specializing in Vector Databases",
+    "profilePicture": "Aryan_Maini.png",
+    "github": "https://github.com/Aryan-Maini",
+    "linkedin": "https://www.linkedin.com/in/aryan-maini/"
+  },
+  {
+    "id": "amaan-ur-rahman",
+    "name": "Amaan Ur Rahman",
+    "industry": ["IT"],
+    "skills": ["C++", "Python"],
+    "description": "2nd year in B.Tech in Mathematics and Computing",
+    "profilePicture": "Amaan's Profile Photo (1).jpg"
+  },
+  {
+    "id": "pranav-arora",
+    "name": "Pranav Arora",
+    "industry": ["Embedded"],
+    "skills": ["ChatGPT", "Claude", "SQL", "Python", "C", "C++", "STMCubeMX", "STMCubeIDE"],
+    "description": "Amazing guy",
+    "profilePicture": "Pranav Arora.jpeg"
+  },
+  {
+    "id": "aaditya-singh",
+    "name": "Aaditya Singh",
+    "industry": ["Embedded"],
+    "skills": ["STMCubeIDE", "STMCubeMX", "C++", "Python"],
+    "description": "3rd year completed in B.Tech",
+    "profilePicture": "Aditya_Singh.png"
+  },
+  {
+    "id": "pramodh-srinivasan",
+    "name": "Pramodh Srinivasan",
+    "industry": ["Embedded"],
+    "skills": ["STMCubeMX", "STMCubeIDE", "C", "C++"],
+    "description": "1st year completed in B.Tech",
+    "profilePicture": "Pramodh Srinivasan.jpeg"
+  },
+  {
+    "id": "isha-pawar",
+    "name": "Isha Pawar",
+    "industry": ["Embedded"],
+    "skills": ["STMCubeIDE", "STMCubeMX", "C", "Communication"],
+    "description": "4th year completed Electronics B.Tech",
+    "profilePicture": "Isha Pawar.jpg"
+  },
+  {
+    "id": "yashasvi-vats",
+    "name": "Yashasvi Vats",
+    "industry": ["Embedded"],
+    "skills": ["ROS2", "Gazebo", "RViz"],
+    "description": "1st year completed in B.Tech",
+    "profilePicture": "Yashasvi Vats.jpeg"
+  },
+  {
+    "id": "lakshveer-singh",
+    "name": "Lakshveer Singh",
+    "industry": ["Embedded"],
+    "skills": ["STMCubeIDE", "STMCubeMX", "C", "C++", "IMU Calib"],
+    "description": "1st year completed in B.Tech EE-VSLI",
+    "profilePicture": "Lakshveer Singh.jpeg"
+  },
+  {
+    "id": "saiyid-mohammad-hussain-rizvi",
+    "name": "Saiyid Mohammad Hussain Rizvi",
+    "industry": ["IT"],
+    "skills": ["STMCubeIDE", "STMCubeMX", "C++", "Python", "Web Development"],
+    "description": "1st year completed in B.Tech CS",
+    "profilePicture": "Saiyid Mohammad HussAain Rizvi.jpeg"
+  },
+  {
+    "id": "pranav-singh",
+    "name": "Pranav Singh",
+    "industry": ["Embedded"],
+    "skills": ["Python", "Java", "SQL", "C", "HTML", "CSS"],
+    "description": "1st year completed in B.Tech CS",
+    "profilePicture": "Pranav Singh.jpeg"
+  },
+  {
+    "id": "swayam-singhai",
+    "name": "Swayam Singhai",
+    "industry": ["IT"],
+    "skills": ["Java", "Python", "C", "STMCubeIDE", "STMCubeMX", "MongoDB", "Postman"],
+    "description": "1st year completed in B.Tech CS",
+    "profilePicture": "Swayam Singhai.jpeg"
+  },
+  {
+    "id": "priyansh-barthwal",
+    "name": "Priyansh Barthwal",
+    "industry": ["IT"],
+    "skills": ["Java", "Python", "C", "STMCubeIDE", "STMCubeMX", "MongoDB", "Flutter", "Node.js"],
+    "description": "1st year completed in B.Tech CS",
+    "profilePicture": "Priyansh Barthwal.jpeg"
+  },
+  {
+    "id": "krish-saxena",
+    "name": "Krish Saxena",
+    "industry": ["IT"],
+    "skills": ["Java", "C", "IT"],
+    "description": "2nd year completed in B.Tech CS",
+    "profilePicture": "Krish Saxena.jpg"
+  },
+  {
+    "id": "jayendra-sharma",
+    "name": "Jayendra Sharma",
+    "industry": ["IT"],
+    "skills": ["Python", "C", "C++", "Scikit Learn", "OpenCV", "Deep Learning"],
+    "description": "3rd year completed in B.Tech",
+    "profilePicture": "Jayendra Sharma.png"
+  },
+  {
+    "id": "amishi-mathur",
+    "name": "Amishi Mathur",
+    "industry": ["Embedded"],
+    "skills": ["Virtual Reality", "Gesture Recognition", "Sentis AI", "Unity", "C#"],
+    "description": "Intern exploring VR gesture recognition and Sentis AI.",
+    "profilePicture": "Amishi Mathur.jpeg"
+  },
+  {
+    "id": "anirban-biswas",
+    "name": "Anirban Biswas",
+    "industry": ["Embedded"],
+    "skills": ["TouchGFX", "Security", "Cryptography"],
+    "description": "Intern working on security integration with TouchGFX.",
+    "profilePicture": "Anirban Biswas.jpeg"
+  },
+  {
+    "id": "anshul-mishra",
+    "name": "Anshul Mishra",
+    "industry": ["Embedded"],
+    "skills": ["Circuit design & simulation", "C", "C++", "Python", "IoT", "STMCubeMX", "STMCubeIDE"],
+    "description": "1st year completed in B.Tech ECE",
+    "profilePicture": "Anshul Mishra.jpeg"
+  },
+  {
+    "id": "avik-chaukiyal",
+    "name": "Avik Chaukiyal",
+    "industry": ["Embedded"],
+    "skills": ["TouchGFX", "ToF Sensors"],
+    "description": "Intern working on Time-of-Flight gesture GUI controls.",
+    "profilePicture": "Avik Chaukiyal.jpg"
+  },
+  {
+    "id": "daksh-bhardwaj",
+    "name": "Daksh Bhardwaj",
+    "industry": ["Embedded"],
+    "skills": ["STM32H725", "TouchGFX"],
+    "description": "Intern working on Teach Pendant interface with TouchGFX.",
+    "profilePicture": "Daksh Bhardwaj.jpeg"
+  },
+  {
+    "id": "dushyant-singh",
+    "name": "Dushyant Singh",
+    "industry": ["IT"],
+    "skills": ["Python", "LLM", "KiCAD"],
+    "description": "Intern working on Generative AI schematic generators.",
+    "profilePicture": "Dushyant Singh.jpeg"
+  },
+  {
+    "id": "gurjas-singh",
+    "name": "Gurjas Singh",
+    "industry": ["Embedded"],
+    "skills": ["STM32N6", "Face Detection"],
+    "description": "Intern working on face detection models for STM32N6.",
+    "profilePicture": "Gurjas Singh.jpeg"
+  },
+  {
+    "id": "jyoti-pundir",
+    "name": "Jyoti Pundir",
+    "industry": ["IT"],
+    "skills": ["React", "Flutter"],
+    "description": "Intern working on the ST Carpooling APP.",
+    "profilePicture": "Jyoti Pundir.jpeg"
+  },
+  {
+    "id": "kartik-singla",
+    "name": "Kartik Singla",
+    "industry": ["Embedded"],
+    "skills": ["C", "C++", "STMCubeIDE", "STMCubeMX"],
+    "description": "2nd year completed in B.Tech ECE",
+    "profilePicture": "Kartik SIngla.jpg"
+  },
+  {
+    "id": "mehak-talwar",
+    "name": "Mehak Talwar",
+    "industry": ["Embedded"],
+    "skills": ["STM32", "Motor Control", "PWM", "C"],
+    "description": "Intern working on motor control algorithms and Bionic Hand.",
+    "profilePicture": "Mehak Talwar.jpeg"
+  },
+  {
+    "id": "prachi-mehta",
+    "name": "Prachi Mehta",
+    "industry": ["IT"],
+    "skills": ["React", "Flutter"],
+    "description": "Intern working on the ST Carpooling APP.",
+    "profilePicture": "Prachi_Mehta.jpg"
+  },
+  {
+    "id": "riya",
+    "name": "Riya",
+    "industry": ["Embedded"],
+    "skills": ["TouchGFX", "Security", "Cryptography"],
+    "description": "Intern working on security integration with TouchGFX.",
+    "profilePicture": "RIYA PHOTO.jpg"
+  },
+  {
+    "id": "shounak-dasgupta",
+    "name": "Shounak Dasgupta",
+    "industry": ["Embedded"],
+    "skills": ["STM32N6", "Face Detection", "Neural Network"],
+    "description": "Intern working on face detection models for STM32N6.",
+    "profilePicture": "Shounak Dasgupta.jpg"
+  },
+  {
+    "id": "tejas-lamba",
+    "name": "Tejas Lamba",
+    "industry": ["IT", "Embedded"],
+    "skills": ["Python", "TypeScript", "JavaScript", "C", "C++", "SQL", "STM32", "STM32CubeIDE", "STM32CubeMX", "X-CUBE-AI", "OpenSTLinux", "OpenCV", "YOLO", "Computer Vision", "Machine Learning", "Deep Learning", "TensorFlow", "Keras", "Scikit-learn", "FAISS", "RAG", "Pathway AI", "ROS2", "Node.js", "Express.js", "FastAPI", "React", "Next.js", "PostgreSQL", "MongoDB", "Prisma", "Docker", "Linux", "Git", "GitHub"],
+    "description": "B.Tech CSE (AI/ML). Embedded AI & Systems Engineering Intern working on STM32MP257, STM32U5, Computer Vision, TinyML, Robotics and Full-Stack AI applications.",
+    "profilePicture": "Tejas_Lamba.png",
+    "github": "https://github.com/tejaslamba",
+    "linkedin": "https://www.linkedin.com/in/tejaslamba/"
+  },
+  {
+    "id": "vardaan-bajpai",
+    "name": "Vardaan Bajpai",
+    "industry": ["IT"],
+    "skills": ["Python", "C++", "DSA", "Golang", "Node.js", "Express.js", "Next.js"],
+    "description": "Intern working on ST Carpooling APP and Motor Control.",
+    "profilePicture": "Vardaan bajpai.jpg"
+  },
+  {
+    "id": "darshil-pawar",
+    "name": "Darshil Pawar",
+    "industry": ["IT"],
+    "skills": ["C", "ChatGPT"],
+    "description": "1st year completed in Diploma in CS (AIDS)",
+    "profilePicture": "Darshil_Pawar.jpg"
+  }
+]

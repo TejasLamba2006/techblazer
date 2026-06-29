@@ -1,0 +1,760 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #000000;
+  --color-surface-soft: #0d0d0d;
+  --color-surface-card: #1a1a1a;
+  --color-surface-elevated: #262626;
+  --color-carbon-gray: #2b2b2b;
+  --color-hairline: #3c3c3c;
+  --color-hairline-strong: #262626;
+  --color-on-dark: #ffffff;
+  --color-body: #bbbbbb;
+  --color-body-strong: #e6e6e6;
+  --color-muted: #7e7e7e;
+  --color-tb-cyan: #4da3ff;
+  --color-tb-gold: #ffd200;
+  --color-m-blue-light: #0066b1;
+  --color-m-blue-dark: #1c69d4;
+  --color-m-red: #e22718;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-body);
+  font-weight: 300;
+}
+
+/* Shake animation on incorrect password */
+.shake-animation {
+  animation: shake 0.4s ease-in-out;
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+/* Color utility classes */
+.text-cyan {
+  color: var(--color-tb-cyan);
+}
+.text-gold {
+  color: var(--color-tb-gold);
+}
+.text-dual {
+  background: linear-gradient(135deg, var(--color-tb-cyan), var(--color-tb-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* BMW M Buttons — 0px radius, uppercase, 1.5px letterspacing */
+.btn-primary-m {
+  background: var(--color-canvas);
+  color: var(--color-on-dark);
+  border: 1px solid var(--color-on-dark);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0 24px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.btn-primary-m:hover {
+  background: var(--color-on-dark);
+  color: var(--color-canvas);
+}
+
+.btn-outline-m {
+  background: transparent;
+  color: var(--color-on-dark);
+  border: 1px solid var(--color-on-dark);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0 24px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.btn-outline-m:hover {
+  background: var(--color-on-dark);
+  color: var(--color-canvas);
+}
+
+.btn-sm-m {
+  height: 36px;
+  padding: 0 14px;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+}
+
+@media (max-width: 640px) {
+  .btn-primary-m,
+  .btn-outline-m {
+    font-size: 12px;
+    height: 44px;
+    padding: 0 16px;
+    letter-spacing: 1px;
+  }
+  .btn-sm-m {
+    height: 32px;
+    padding: 0 10px;
+    font-size: 10px;
+  }
+}
+
+/* Filter tabs — text-only, uppercase, no radius */
+.filter-tab {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-body);
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+}
+.filter-tab:hover {
+  color: var(--color-on-dark);
+}
+.filter-tab-active {
+  color: var(--color-on-dark);
+  border-bottom-color: var(--color-on-dark);
+}
+
+@media (max-width: 640px) {
+  .filter-tab {
+    font-size: 12px;
+    padding: 6px 12px;
+    letter-spacing: 1px;
+  }
+}
+
+/* Uppercase heading */
+.uppercase-heading {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* BMW M card — 0px radius, 1px hairline, surface-card bg */
+.m-card {
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-hairline);
+  transition: border-color 0.25s;
+}
+.m-card:hover {
+  border-color: var(--color-body);
+}
+
+/* Sub card (for cross-linking in modal) */
+.sub-card {
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-hairline);
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s;
+}
+.sub-card:hover {
+  background: var(--color-surface-card);
+  border-color: var(--color-body);
+}
+
+/* Skill chip — no radius */
+.skill-chip {
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-hairline);
+  color: var(--color-body);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  cursor: default;
+  transition: border-color 0.25s, color 0.25s;
+}
+.skill-chip:hover {
+  border-color: var(--color-body);
+  color: var(--color-on-dark);
+}
+
+/* Framework icon chip */
+.framework-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-hairline);
+  color: var(--color-body-strong);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.framework-chip:hover {
+  border-color: var(--color-on-dark);
+  color: var(--color-on-dark);
+}
+.framework-chip svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+/* Text truncation */
+.text-truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Detail modal overlay */
+.detail-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.detail-modal-content {
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-hairline);
+  max-width: 600px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  animation: modal-appear 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .detail-modal-content {
+    max-width: 100%;
+    max-height: 90vh;
+  }
+}
+
+@keyframes modal-appear {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.detail-modal-content::-webkit-scrollbar { width: 6px; }
+.detail-modal-content::-webkit-scrollbar-track { background: var(--color-surface-soft); }
+.detail-modal-content::-webkit-scrollbar-thumb { background: var(--color-hairline); }
+
+/* Close button */
+.btn-close-white {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 30;
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.btn-close-white:hover {
+  color: var(--color-on-dark);
+}
+
+/* Hero section */
+.hero-section {
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-hairline);
+}
+
+/* M-stripe divider */
+.m-stripe-divider {
+  height: 4px;
+  width: 100%;
+  display: flex;
+}
+.stripe-blue-light {
+  flex: 1;
+  background: var(--color-m-blue-light);
+}
+.stripe-blue-dark {
+  flex: 1;
+  background: var(--color-m-blue-dark);
+}
+.stripe-red {
+  flex: 1;
+  background: var(--color-m-red);
+}
+
+/* Badge — no radius */
+.badge-m {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 4px 12px;
+  border: 1px solid var(--color-hairline);
+  display: inline-block;
+}
+
+/* Section spacing */
+.section-band {
+  padding: 96px 0;
+}
+
+/* Login card */
+.login-card {
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-hairline);
+  max-width: 420px;
+  width: 100%;
+}
+
+/* Login input */
+.login-input {
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-hairline);
+  color: var(--color-on-dark);
+  font-size: 16px;
+  padding: 12px 16px;
+  height: 48px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.login-input:focus {
+  border-color: var(--color-on-dark);
+}
+.login-input::placeholder {
+  color: var(--color-muted);
+}
+
+/* Tech badge — no radius */
+.tech-badge {
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-hairline);
+  color: var(--color-body);
+  padding: 4px 12px;
+  font-size: 14px;
+}
+
+/* Marquee — auto-scroll left-to-right, pause on hover */
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 640px) {
+  .marquee-track {
+    animation-duration: 20s;
+  }
+}
+
+/* ===================== ANIMATIONS ===================== */
+
+/* Fade-up on scroll */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade-in */
+.anim-fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.anim-fade-in.visible {
+  opacity: 1;
+}
+
+/* Scale-up on scroll */
+.anim-scale-up {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-scale-up.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slide in from left */
+.anim-slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide in from right */
+.anim-slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger children — each child animates with delay via CSS custom property */
+.anim-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--stagger-i, 0) * 80ms);
+}
+.anim-stagger.visible > * {
+  opacity: 1;
+  transform: none;
+}
+
+/* Card hover lift */
+.card-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* WebGL hero: hide on mobile for performance */
+@media (max-width: 768px) {
+  .hero-section > div:first-child {
+    display: none !important;
+  }
+}
+
+/* Tag sphere container */
+.tag-sphere-container canvas {
+  outline: none;
+}
+
+/* Grayscale-to-color on scroll reveal */
+.avatar-reveal {
+  filter: grayscale(1);
+  transition: filter 0.8s cubic-bezier(0.16, 1, 0.3);
+}
+.visible .avatar-reveal,
+.avatar-reveal.revealed {
+  filter: grayscale(0);
+}
+
+/* Perspective container for 3D tilt cards */
+.tilt-container {
+  perspective: 800px;
+}
+
+/* Stripe animation */
+@keyframes stripe-slide {
+  0% { transform: scaleX(0); transform-origin: left; }
+  50% { transform: scaleX(1); transform-origin: left; }
+  50.1% { transform: scaleX(1); transform-origin: right; }
+  100% { transform: scaleX(0); transform-origin: right; }
+}
+
+/* Counter animation */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pulse glow for active elements */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(77, 163, 255, 0); }
+  50% { box-shadow: 0 0 0 4px rgba(77, 163, 255, 0.15); }
+}
+
+/* Fade transition for modal */
+.fade-blur-enter-active,
+.fade-blur-leave-active {
+  transition: opacity 0.25s ease;
+}
+.fade-blur-enter-from,
+.fade-blur-leave-to {
+  opacity: 0;
+}
+
+/* ── SVG Path Drawing Animations ── */
+.svg-draw {
+  stroke-dasharray: var(--path-length, 1000);
+  stroke-dashoffset: var(--path-length, 1000);
+  fill: none;
+  animation: svg-draw 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.svg-draw-delay-1 { animation-delay: 0.15s; }
+.svg-draw-delay-2 { animation-delay: 0.3s; }
+.svg-draw-delay-3 { animation-delay: 0.45s; }
+.svg-draw-delay-4 { animation-delay: 0.6s; }
+
+@keyframes svg-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* SVG fill fade-in after stroke draw */
+.svg-fill-in {
+  stroke-dasharray: var(--path-length, 1000);
+  stroke-dashoffset: var(--path-length, 1000);
+  fill: none;
+  animation:
+    svg-draw 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards,
+    svg-fill 0.6s ease 1.2s forwards;
+}
+
+@keyframes svg-fill {
+  to {
+    stroke-dashoffset: 0;
+    fill: currentColor;
+    opacity: 0.15;
+  }
+}
+
+/* SVG pulse glow on path */
+.svg-pulse-path {
+  stroke-dasharray: var(--path-length, 200);
+  stroke-dashoffset: 0;
+  animation: svg-pulse-stroke 2s ease-in-out infinite;
+}
+
+@keyframes svg-pulse-stroke {
+  0%, 100% { stroke-opacity: 0.4; stroke-width: 1; }
+  50% { stroke-opacity: 1; stroke-width: 2; }
+}
+
+/* SVG path morph / dash cycle */
+.svg-dash-cycle {
+  stroke-dasharray: 8 4;
+  animation: svg-dash 12s linear infinite;
+}
+
+@keyframes svg-dash {
+  to { stroke-dashoffset: -120; }
+}
+
+/* M-stripe SVG draw animation */
+.m-stripe-svg path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+}
+
+.m-stripe-svg.visible path {
+  animation: svg-draw 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.m-stripe-svg.visible path:nth-child(2) { animation-delay: 0.2s; }
+.m-stripe-svg.visible path:nth-child(3) { animation-delay: 0.4s; }
+
+/* Hero SVG logo draw */
+.hero-logo-draw {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+}
+
+.hero-logo-draw.visible {
+  animation: svg-draw 2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+/* ── Page Transition ── */
+.page-enter {
+  animation: page-enter 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes page-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ── Card Hover Glow — cyan for IT, gold for embedded ── */
+.m-card {
+  --glow-color: var(--color-body);
+  transition: border-color 0.25s, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+}
+.m-card:hover {
+  box-shadow: 0 0 0 1px var(--glow-color), 0 4px 24px -4px color-mix(in srgb, var(--glow-color) 20%, transparent);
+}
+
+.glow-cyan {
+  --glow-color: var(--color-tb-cyan);
+}
+.glow-gold {
+  --glow-color: var(--color-tb-gold);
+}
+.glow-dual {
+  --glow-color: var(--color-tb-cyan);
+  --glow-color-2: var(--color-tb-gold);
+}
+
+/* ── Nav Link Underline — draws from cursor entry side ── */
+.nav-underline {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-on-dark);
+  transform: scaleX(0);
+  transform-origin: var(--underline-origin, left);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-underline[data-active="true"] {
+  transform: scaleX(1);
+}
+.nav-underline[data-origin="left"] {
+  --underline-origin: left;
+}
+.nav-underline[data-origin="right"] {
+  --underline-origin: right;
+}
+
+/* ── Button Click — brightness dip + border flash (industrial, no squash) ── */
+.btn-primary-m:active {
+  background: var(--color-on-dark);
+  color: var(--color-canvas);
+  transition: none;
+}
+.btn-outline-m:active {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-body);
+  transition: none;
+}
+.btn-sm-m:active {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-body);
+  transition: none;
+}
+
+/* ── Framework Chip Stagger on Card Hover ── */
+.m-card:hover .framework-chip {
+  animation: chip-stagger-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.m-card:hover .framework-chip:nth-child(1) { animation-delay: 0ms; }
+.m-card:hover .framework-chip:nth-child(2) { animation-delay: 40ms; }
+.m-card:hover .framework-chip:nth-child(3) { animation-delay: 80ms; }
+.m-card:hover .framework-chip:nth-child(4) { animation-delay: 120ms; }
+.m-card:hover .framework-chip:nth-child(5) { animation-delay: 160ms; }
+.m-card:hover .framework-chip:nth-child(6) { animation-delay: 200ms; }
+.m-card:hover .framework-chip:nth-child(7) { animation-delay: 240ms; }
+.m-card:hover .framework-chip:nth-child(8) { animation-delay: 280ms; }
+
+@keyframes chip-stagger-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  /* Kill all animations and transitions */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Scroll-reveal elements: force visible immediately */
+  .anim-fade-up,
+  .anim-fade-in,
+  .anim-scale-up,
+  .anim-slide-left,
+  .anim-slide-right,
+  .anim-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* SVG path drawings: show final state */
+  .hero-logo-draw,
+  .m-stripe-svg path,
+  .svg-draw {
+    stroke-dashoffset: 0 !important;
+    animation: none !important;
+  }
+
+  /* Page transition: skip */
+  .page-enter {
+    animation: none !important;
+  }
+
+  /* Nav underline: active links still get their underline (transition reaches final state instantly) */
+  .nav-underline[data-active="true"] {
+    transform: scaleX(1) !important;
+  }
+
+  /* Framework chips on hover: just show all immediately (no stagger delay) */
+  .m-card:hover .framework-chip {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Grayscale avatars: show in color immediately */
+  .avatar-reveal {
+    filter: grayscale(0) !important;
+  }
+
+  /* Card hover lift: disable */
+  .card-lift:hover {
+    transform: none !important;
+  }
+
+  /* Alternating slide-in: show inline (no motion) */
+  .anim-slide-left,
+  .anim-slide-right {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
